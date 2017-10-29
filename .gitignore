@@ -1,0 +1,7 @@
+bin/
+.idea
+include/
+lib/
+local/
+.ipynb_checkpoints/
+pip-selfcheck.json
