@@ -11,3 +11,10 @@ $ pip install -r requirements.txt
 $ python live_Stories.py -h
 ```
 
+
+## running :
+
+```
+$ python live_Stories.py -mode weekly -output /tmp/data.csv 
+```
+

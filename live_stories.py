@@ -17,7 +17,7 @@ if __name__ == '__main__':
     parser = Wonder_cbc_parser()
 
     params = Params("get Morbidity and Mortality Weekly Report (MMWR) from : wonder.cdc.gov")
-    current_year = now = datetime.now().year
+    current_year = now = datetime.now().year + 1
     current_week = 23  # TODO: calculate current week
 
     base_url = params.base_url()
@@ -25,7 +25,7 @@ if __name__ == '__main__':
     mode = params.mode()
     if mode == 'weekly':
 
-        df =  parser.weekly_job(base_url, 1996, current_year)
+        df =  parser.weekly_job(base_url, 2017, current_year)
         df.to_csv(output_file, index=False,header=False)
     if mode == 'last_week':
 

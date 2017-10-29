@@ -19,7 +19,7 @@ class Wonder_cbc_parser():
         print url
         text = requests.get(url).text
         text = text.replace('-', '0')
-        df= pd.read_csv(io.StringIO(text), sep='\t', header=None, skiprows=17, skipfooter=21,engine='python')
+        df= pd.read_csv(io.StringIO(text), sep='\t', header=None, skiprows=17, skipfooter=22)
         df['year'] = year
         df['week'] = week
         return df
