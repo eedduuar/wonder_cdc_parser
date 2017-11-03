@@ -13,35 +13,22 @@ from parsers.Wonder_cdc_parser import Wonder_cbc_parser
 
 class TestWonder_cbc_parser(TestCase):
 
-    text = '''
-    Hepatitis (viral, acute), Type C, Probable previous 52 weeks maximum
-    Hepatitis (viral, acute), Type C, Probable cummulative for 2017
-    Hepatitis (viral, acute), Type C, Probable cummulative for 2016
 
-    tab delimited data:
-    UNITED STATES	8	44	134	1,770	2,398	3	18	80	690	830
-    NEW ENGLAND	-	5	14	179	422	-	1	4	40	110
-    Conn.	-	0	1	6	16	-	0	0	-	-
-    Maine	-	0	2	15	17	-	0	1	5	10
-    Mass.	-	4	14	154	384	-	1	4	35	100
-    N.H.	-	0	0	-	-	-	0	0	-	-
-    R.I.	-	0	0	-	-	-	0	0	-	-
-    etwert
-    wert
-    we
-    w'''
+
     def test_calculate_first_row(self):
+        text = sample.sample0
         request = Mock()
         parser = Wonder_cbc_parser(request)
-        fr = parser.calculate_first_row(self.text)
+        fr = parser.calculate_first_row(text)
         self.assertEqual(fr,6)
 
 
     def test_calculate_skipfooter(self):
+        text = sample.sample0
         request = Mock()
         parser = Wonder_cbc_parser(request)
         parser.region_length = 7
-        sf = parser.calculate_skipfooter(self.text,5)
+        sf = parser.calculate_skipfooter(text,5)
         self.assertEqual(sf,4)
 
 

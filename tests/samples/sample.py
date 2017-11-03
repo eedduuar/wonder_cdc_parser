@@ -1,4 +1,24 @@
 # coding=utf-8
+
+sample0 = '''
+Hepatitis (viral, acute), Type C, Probable previous 52 weeks maximum
+Hepatitis (viral, acute), Type C, Probable cummulative for 2017
+Hepatitis (viral, acute), Type C, Probable cummulative for 2016
+
+tab delimited data:
+UNITED STATES	8	44	134	1,770	2,398	3	18	80	690	830
+NEW ENGLAND	-	5	14	179	422	-	1	4	40	110
+Conn.	-	0	1	6	16	-	0	0	-	-
+Maine	-	0	2	15	17	-	0	1	5	10
+Mass.	-	4	14	154	384	-	1	4	35	100
+N.H.	-	0	0	-	-	-	0	0	-	-
+R.I.	-	0	0	-	-	-	0	0	-	-
+etwert
+wert
+we
+w'''
+
+
 sample1=u'''
 TABLE II. (Part 7)  Provisional cases of selected notifiable diseases (>= 1,000 cases reported during the preceding year), and selected* low frequency diseases, United States and U.S. territories, week ending October 21, 2017 (WEEK 42)
 
