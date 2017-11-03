@@ -15,6 +15,6 @@ $ python live_Stories.py -h
 ## running :
 
 ```
-$ python live_Stories.py -mode weekly -output /tmp/data.csv 
+$ python live_Stories.py -mode weekly -output /tmp/data.csv
 ```
 
