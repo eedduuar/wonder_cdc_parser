@@ -230,3 +230,31 @@ MMWR web application provided by CDC WONDER; http://wonder.cdc.gov
 
 
 '''
+
+
+
+sample3= u'''
+TABLE II. (Part 7)  Provisional cases of selected* notifiable diseases (>= 1,000 cases reported during the preceding year), and selected low frequency diseases, United States and U.S. territories, week ending May 21, 2016 (WEEK 20)
+
+column labels in same order that data fields appears in each record below:
+Reporting Area
+Invasive Pneumococcal, All Ages Disease current week
+Invasive Pneumococcal, All Ages previous 52 weeks median
+Invasive Pneumococcal, All Ages previous 52 weeks maximum
+Invasive Pneumococcal, All Ages cummulative for 2016
+Invasive Pneumococcal, All Ages cummulative for 2015
+Invasive Pneumococcal, Age <5 years current week
+Invasive Pneumococcal, Age <5 years previous 52 weeks median
+Invasive Pneumococcal, Age <5 years previous 52 weeks maximum
+Invasive Pneumococcal, Age <5 years cummulative for 2016
+Invasive Pneumococcal, Age <5 years cummulative for 2015
+Legionellosis current week
+Legionellosis previous 52 weeks median
+Legionellosis previous 52 weeks maximum
+Legionellosis cummulative for 2016
+Legionellosis cummulative for 2015
+
+tab delimited data:
+No records found
+
+'''

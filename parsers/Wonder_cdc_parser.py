@@ -1,6 +1,8 @@
 import pandas as pd
 import io
 
+from defined_exceptions.NoDataException import NoDataException
+
 
 class Wonder_cbc_parser():
     def __init__(self, http_client):
@@ -31,7 +33,7 @@ class Wonder_cbc_parser():
         text = text.replace('-', '0')
 
         if 'No records found' in text:
-            raise Exception('empty data for:' + str(year) + '-' + str(week))
+            raise NoDataException('empty data for:' + str(year) + '-' + str(week))
 
         sr = self.calculate_first_row(text)
         sk = self.calculate_skipfooter(text,sr)

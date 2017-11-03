@@ -1,4 +1,7 @@
 import sys
+
+from defined_exceptions import NoDataException
+
 reload(sys)
 sys.setdefaultencoding('UTF-8')
 from unittest import TestCase
@@ -80,3 +83,21 @@ class TestWonder_cbc_parser(TestCase):
         self.assertEqual(suma,90)
 
         self.assertEqual(len(df), 67)
+
+
+    def test_weekly_no_data(self):
+        request = Mock()
+
+
+        text = sample.sample3
+
+        request.get = Mock(return_value=text)
+
+        parser = Wonder_cbc_parser(request)
+
+        try:
+            parser.weekly_data('url.com/%s/%s', '2016', '01', 11)
+            self.assertEqual(1,2,'exception didnt rise')
+        except :
+
+            self.assertEqual(1,1,'exception raise')
