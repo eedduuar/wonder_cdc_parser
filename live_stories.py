@@ -40,7 +40,7 @@ if __name__ == '__main__':
         exit(1)
 
     if mode == 'weekly':
-        df1 = data_service.get_data_legacy_format(base_url, 2016, 2017)
+        df1 = data_service.get_data_legacy_format(base_url, 2006, 2017)
         df2 =  data_service.get_data_current_format(base_url, 2017, current_year + 1, current_week)
 
         df = pd.concat([df1,df2],axis=0,ignore_index=True)
